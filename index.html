@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorenz Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+      * { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; font-family: 'Poppins', sans-serif; }
+      html { font-size: 62.5%; scroll-behavior: smooth; }
+      body { background: black; color: white; }
+
+      header { margin-top: 20px; position: fixed; top: 0; left: 0; width: 100%; padding: 1rem 9%; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+      .logo { font-size: 3rem; color: #b74b4b; font-weight: 800; transition: .5s ease; }
+      .logo:hover { transform: scale(1.1); }
+      nav a { font-size: 1.8rem; color: white; margin-left: 4rem; font-weight: 500; transition: .3s; border-bottom: 3px solid transparent; }
+      nav a:hover, nav a.active { color: #b74b4b; border-bottom: 3px solid #b74b4b; }
+
+      section { min-height: 100vh; padding: 6rem 9% 2rem; }
+
+      /* Home */
+      .home { display: flex; justify-content: center; align-items: center; gap: 8rem; }
+      .home h1 { font-size: 6rem; }
+      .home h3 { font-size: 4rem; margin-bottom: 1rem; }
+      .home-img img { width: 32vw; border-radius: 50%; box-shadow: 0 0 25px #b74b4b; }
+      span { color: #b74b4b; }
+
+      /* Reusable */
+      .section-title { font-size: 4rem; color: #b74b4b; text-align: center; margin-bottom: 4rem; }
+      .grid { display: grid; gap: 2rem; }
+      .card { background: #161616; padding: 2rem; border-radius: 1.5rem; border: 2px solid #b74b4b; transition: 0.3s; }
+      .card:hover { transform: translateY(-5px); box-shadow: 0 0 20px #b74b4b; }
+      .card h3 { font-size: 2.2rem; margin-bottom: 1rem; color: #b74b4b; }
+      .card p { font-size: 1.5rem; line-height: 1.6; }
+
+      /* Services */
+      .services .grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+      /* Skills */
+      .skills .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+      .skill-bar { background: #333; border-radius: 1rem; overflow: hidden; }
+      .skill-level { background: #b74b4b; padding: .8rem; text-align: right; color: black; font-weight: 600; }
+
+      /* Education & Experience */
+      .timeline { border-left: 3px solid #b74b4b; padding-left: 2rem; }
+      .timeline-item { margin-bottom: 2rem; }
+      .timeline-item h3 { font-size: 2rem; color: #b74b4b; }
+      .timeline-item span { font-size: 1.4rem; color: #aaa; }
+      .timeline-item p { font-size: 1.5rem; }
+
+      /* Contact */
+      .contact { display: flex; flex-direction: column; align-items: center; }
+      .contact form { width: 100%; max-width: 50rem; display: flex; flex-direction: column; gap: 1.5rem; }
+      .contact input, .contact textarea { padding: 1.5rem; background: #161616; border: 2px solid #b74b4b; border-radius: 1rem; color: white; }
+      .contact button { padding: 1rem; background: #b74b4b; color: black; border-radius: 1rem; font-size: 1.8rem; cursor: pointer; }
+
+  </style>
+</head>
+
+<body>
+<header>
+  <a href="#" class="logo">Lorenz Andrie</a>
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#services">Services</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Home -->
+<section id="home" class="home">
+  <div class="home-img">
+    <img src="bem.png" alt="Profile Image">
+  </div>
+  <div class="home-content">
+    <h1>Hi, It's <span>Lorenz</span></h1>
+    <h3 class="typing-text">I'm a <span>IT Student</span></h3>
+    <p>As an IT student, I'm focused on programming, networking, and emerging technologies to solve real-world problems.</p>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="services">
+  <h2 class="section-title">My Services</h2>
+  <div class="grid">
+    <div class="card"><h3><i class="fa-solid fa-code"></i> Web Development</h3><p>Build responsive and modern websites using HTML, CSS, JS, and PHP.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-database"></i> Database Management</h3><p>Design, manage, and optimize MySQL databases for your apps.</p></div>
+    <div class="card"><h3><i class="fa-solid fa-mobile-screen"></i> App Prototyping</h3><p>Create app mockups and prototypes for better project planning.</p></div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="skills">
+  <h2 class="section-title">My Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>HTML & CSS</h3>
+      <div class="skill-bar"><div class="skill-level" style="width: 90%;">90%</div></div>
+    </div>
+    <div class="card">
+      <h3>JavaScript</h3>
+      <div class="skill-bar"><div class="skill-level" style="width: 75%;">75%</div></div>
+    </div>
+    <div class="card">
+      <h3>PHP & MySQL</h3>
+      <div class="skill-bar"><div class="skill-level" style="width: 80%;">80%</div></div>
+    </div>
+    <div class="card">
+      <h3>Networking</h3>
+      <div class="skill-bar"><div class="skill-level" style="width: 70%;">70%</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="education">
+  <h2 class="section-title">Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Bachelor of Science in Information Technology</h3>
+      <span>2022 - Present | college for Rearch and Technology</span>
+      <p>Currently pursuing IT degree with focus on software development.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Senior High School (TVL ict Strand)</h3>
+      <span>2020 - 2022 | Rizal National Highschool</span>
+      <p>Graduated with honors, specializing in Science, Technology, Engineering, and Mathematics.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="experience">
+  <h2 class="section-title">Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Freelance Web Developer</h3>
+      <span>2023 - Present</span>
+      <p>Worked on small-scale websites and personal portfolio projects using PHP and MySQL.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Intern - DPWH IT Department</h3>
+      <span>2024</span>
+      <p>Assisted in database management and basic IT support tasks at DPWH.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <?php echo $message; ?>
+  <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<script>
+  // Mobile Nav
+  const header = document.querySelector('header');
+  const hamburger = document.createElement('i');
+  hamburger.className = 'fas fa-bars';
+  hamburger.style.cssText = 'cursor:pointer;font-size:2.5rem;color:#b74b4b;display:none;';
+  header.appendChild(hamburger);
+  const nav = document.querySelector('nav');
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('fa-times');
+  });
+  if (window.innerWidth <= 995) hamburger.style.display = 'block';
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 995) hamburger.style.display = 'block';
+    else { hamburger.style.display = 'none'; nav.classList.remove('active'); }
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
